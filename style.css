@@ -1,0 +1,100 @@
+:root {
+	--bg-color: #f5f5f5;
+	--gray-color: #ccccccb9;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	min-width: 320px;
+	font-family: 'Roboto', sans-serif;
+}
+
+.wrapper {
+	display: grid;
+	grid-auto-rows: 50px;
+	padding-top: 30px;
+}
+
+.container-wrapper {
+	display: grid;
+	justify-content: center;
+	grid-template-columns: repeat(5, 200px);
+	min-height: 500px;
+}
+
+.wrapper-col {
+	border: 1px solid rgb(41, 41, 43);
+	text-align: center;
+	align-content: center;
+	vertical-align: middle;
+}
+
+.wrapper-element-img,
+.wrapper-month {
+	text-align: center;
+	vertical-align: middle;
+}
+
+.img {
+	height: 90px;
+}
+
+.text {
+	align-items: center;
+	margin: 10px;
+}
+
+.exit {
+	display: grid;
+	margin-top: 480px;
+	height: 45px;
+	margin-right: 100px;
+	justify-content: end;
+}
+
+.img-exit {
+	width: 45px;
+	height: 45px;
+}
+
+.image-radio {
+	display: none;
+}
+
+.radio-label {
+	display: inline-block;
+	border: 2px solid #f0f0f0;
+	cursor: pointer;
+	background-size: cover;
+	width: 30px;
+	height: 30px;
+}
+
+.image-radio:checked + .radio-label {
+	border: 2px solid rgb(12, 6, 94);
+	background-image: url('img/tick.svg');
+}
+
+@media screen and (max-width: 1200px) {
+	.container-wrapper {
+		display: grid;
+		grid-template-columns: repeat(5, 200px);
+		grid-template-rows: repeat(5, 200px);
+	}
+
+	.exit {
+		display: grid;
+		width: 100%;
+		margin-top: 980px;
+	}
+}
